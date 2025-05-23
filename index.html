@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bróker Quotex - Trading Forex, Criptomonedas y Más</title>
+<style>
+  /* Reset básico */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.7;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    color: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(78, 84, 200, 0.6);
+    z-index: 1000;
+    animation: slideDown 0.7s ease forwards;
+  }
+  header h1 {
+    font-size: 1.7rem;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+  }
+  nav a {
+    color: #d1d1ff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+  }
+  nav a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #ffdd57;
+    transition: width 0.3s ease;
+  }
+  nav a:hover {
+    color: #fff176;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+  main {
+    max-width: 900px;
+    margin: 110px auto 50px auto;
+    padding: 0 25px;
+  }
+  section {
+    margin-bottom: 60px;
+    background: #1e1e2f;
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(79, 84, 175, 0.7);
+    border: 2px solid transparent;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  section:hover {
+    border-color: #ffdd57;
+    box-shadow: 0 12px 30px rgba(255, 221, 87, 0.7);
+  }
+  section h2 {
+    color: #ffdd57;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    text-shadow: 0 0 5px #ffdd57aa;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  p {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    color: #dcdcdc;
+  }
+  /* Botón principal */
+  .btn-primary {
+    display: inline-block;
+    background: #ffdd57;
+    color: #1e1e2f;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.15rem;
+    box-shadow: 0 6px 15px rgba(255, 221, 87, 0.5);
+  }
+  .btn-primary:hover {
+    background: #f2c900;
+    color: #1b1b2f;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(242, 201, 0, 0.8);
+  }
+  /* Sección de otros brókers */
+  .broker-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.05rem;
+    color: #cfcfcf;
+  }
+  .broker-list li {
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+  }
+  .broker-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #ffdd57;
+  }
+  footer {
+    text-align: center;
+    padding: 25px;
+    color: #999999;
+    font-size: 0.9rem;
+    border-top: 1px solid #333344;
+    margin-top: 50px;
+  }
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Animaciones */
+  @keyframes slideDown {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsivo */
+  @media(max-width: 600px){
+    header {
+      flex-direction: column;
+      padding: 15px 20px;
+    }
+    nav a {
+      margin-left: 0;
+      margin-right: 15px;
+      font-size: 1rem;
+    }
+    main {
+      padding: 0 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Quotex y Trading</h1>
+  <nav>
+    <a href="#quotex">Quotex</a>
+    <a href="#forex">Trading Forex</a>
+    <a href="#crypto">Trading Criptomonedas</a>
+    <a href="#otros">Otros Brókers</a>
+  </nav>
+</header>
+
+<main>
+  <section id="quotex">
+    <h2>Bróker Quotex: Beneficios y Contras</h2>
+    <p><li>
+      Quotex es una plataforma de trading en línea que se ha ganado un lugar destacado en el mercado de opciones binarias y activos digitales. Una de las principales ventajas de Quotex es su interfaz intuitiva y fácil de usar, que permite a traders principiantes y expertos operar con confianza. La plataforma ofrece una amplia variedad de activos para negociar, incluyendo pares de divisas, criptomonedas, acciones y materias primas.
+    </li></p>
+    <p><li>
+      Entre sus beneficios destaca la rapidez en la ejecución de órdenes y una cuenta demo gratuita para practicar sin riesgo. Además, cuenta con múltiples métodos de depósito y retiro, haciendo que las transacciones sean simples y accesibles para usuarios de distintos países.
+    </li></p>
+    <p><li>
+      Por otro lado, algunos de sus contras incluyen que, como todo bróker enfocado en opciones binarias, el riesgo es alto y puede no ser adecuado para todos los perfiles de inversores. También, la regulación de Quotex varía según la región (Paraisos fiscales), por lo que es importante verificar la legalidad y seguridad en tu país antes de operar.
+        <p><li>
+            Abajo esta la pagina oficial  (solo 18+)
+        </li></p>
+    </li></p>
+    <a href="https://broker-qx.pro/?lid=1215697" class="btn-primary" target="_blank" rel="noopener noreferrer">Ir a la página oficial</a>
+  </section>
+
+  <section id="forex">
+    <h2>¿Qué es el Trading en Forex?</h2>
+    <p>
+      El trading en Forex (Foreign Exchange) es el mercado global de compra y venta de divisas. Es uno de los mercados financieros más grandes y líquidos del mundo, donde diariamente se mueven trillones de dólares. Los traders de Forex intentan beneficiarse de las fluctuaciones en las tasas de cambio entre pares de monedas, como EUR/USD o USD/JPY.
+    </p>
+    <p>
+      Operar en Forex implica analizar factores económicos, políticos y sociales que afectan el valor de las divisas. Los participantes pueden usar diferentes estrategias, desde análisis técnico con gráficos y patrones, hasta análisis fundamental basado en noticias y datos económicos. La ventaja del Forex es que funciona 24 horas al día, cinco días a la semana, lo que permite una gran flexibilidad horaria para operar.
+    </p>
+    <p>
+      Sin embargo, también conlleva riesgos, ya que el mercado puede ser muy volátil. Por eso, es esencial contar con una buena educación financiera, gestionar el riesgo correctamente y usar herramientas como el apalancamiento con cuidado para evitar grandes pérdidas.
+    </p>
+  </section>
+
+  <section id="crypto">
+    <h2>Trading en Criptomonedas</h2>
+    <p>
+      El trading en criptomonedas consiste en comprar y vender monedas digitales como Bitcoin, Ethereum, Ripple y muchas otras, con el objetivo de obtener beneficios por sus cambios de precio. Este mercado ha crecido rápidamente en los últimos años, atrayendo a inversores de todo el mundo por su alta volatilidad y potencial de ganancias.
+    </p>
+    <p>
+      A diferencia del Forex, el mercado cripto funciona las 24 horas, los 7 días de la semana, lo que permite operar en cualquier momento. Además, las criptomonedas no están controladas por bancos centrales ni gobiernos, lo que las hace más descentralizadas, pero también más impredecibles.
+    </p>
+    <p>
+      Para operar con criptomonedas, es importante usar plataformas confiables y seguras, entender la tecnología blockchain y estar preparado para la alta fluctuación de precios. El análisis técnico es fundamental, aunque también se recomienda seguir las noticias y regulaciones que afectan el sector para tomar decisiones informadas.
+    </p>
+  </section>
+
+  <section id="otros-brokers">
+  <h2 style="text-align: center;">Otros Brókers de Trading Forex</h2>
+  <p style="text-align: center;">
+    En el mundo del trading Forex, existen múltiples brókers confiables y ampliamente utilizados por traders profesionales y principiantes. Algunos de los más destacados son **Pepperstone**, **IC Markets**, **XM**, y **FXTM**, todos con buena reputación y plataformas robustas.
+  </p>
+  <p style="text-align: center;">
+    **Pepperstone** se caracteriza por ofrecer ejecuciones ultrarrápidas y spreads bajos, ideal para scalping y day trading. **IC Markets** es conocido por su alta liquidez y el acceso directo al mercado (ECN), lo que atrae a traders institucionales y minoristas por igual.
+  </p>
+  <p style="text-align: center;">
+    **XM** destaca por su formación educativa y bonos de bienvenida, siendo una excelente opción para quienes están comenzando. Por su parte, **FXTM (ForexTime)** ofrece cuentas adaptadas a distintos estilos de trading, incluyendo cuentas con apalancamiento flexible y ejecución rápida.
+  </p>
+  <p style="text-align: center;">
+    A la hora de elegir un bróker Forex, es importante revisar que esté regulado por organismos oficiales (como FCA, ASIC o CySEC), que tenga comisiones claras, atención al cliente efectiva y una plataforma estable como MetaTrader 4 o 5.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2025 Página informativa sobre trading y bróker Quotex.  
+</footer>
+
+</body>
+</html>
